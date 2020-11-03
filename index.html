@@ -22,7 +22,9 @@
 
   function checkLoginState() {               // Called when a person is finished with the Login Button.
     FB.getLoginStatus(function(response) {   // See the onlogin handler
-      statusChangeCallback(response);
+      //statusChangeCallback(response);
+      document.getElementById('infor').innerText=JSON.stringify(response)
+
     });
   }
 
@@ -37,8 +39,7 @@
 
 
     FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
-      //statusChangeCallback(response);        // Returns the login status.
-      document.getElementById('status').innerText=JSON.stringify(response)
+      statusChangeCallback(response);        // Returns the login status.
 
     });
   };
