@@ -37,7 +37,9 @@
 
 
     FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
-      statusChangeCallback(response);        // Returns the login status.
+      //statusChangeCallback(response);        // Returns the login status.
+      document.getElementById('status').innerText=JSON.stringify(response)
+
     });
   };
  
@@ -46,7 +48,6 @@
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
       
-        document.getElementById('status').innerText=JSON.stringify(response)
 
     });
   }
