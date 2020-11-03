@@ -17,7 +17,7 @@
                 // Called with the results from FB.getLoginStatus().
                 console.log("statusChangeCallback");
                 console.log(response); // The current login status of the person.
-                document.getElementById("status").innerText = JSON.stringify(response);
+                //document.getElementById("status").innerText = JSON.stringify(response);
                 if (response.status === "connected") {
                     // Logged into your webpage and Facebook.
                     testAPI();
@@ -31,7 +31,7 @@
                 // Called when a person is finished with the Login Button.
                 FB.getLoginStatus(function (response) {
                     // See the onlogin handler
-                    //statusChangeCallback(response);
+                    statusChangeCallback(response);
                     document.getElementById("infor").innerText = JSON.stringify(response);
                 });
             }
